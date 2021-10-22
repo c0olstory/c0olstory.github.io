@@ -1,0 +1,170 @@
+//====================================================================================================
+.footer {
+  @include adaptiv-value("margin-top", 60, 30, 1);
+  &__container {
+    position: relative;
+    @media (min-width: $md2+px) {
+      &::before {
+        content: "";
+        background-color: rgba(24, 191, 30, 0.05);
+        position: absolute;
+        top: 0;
+        @include adaptiv-value("right", 500, 100, 1);
+        // right: 500px;
+        width: 100vw;
+        height: 100%;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__body {
+    border-top: 1px solid #d8d8d8;
+    @include adaptiv-value("padding-top", 40, 20, 1);
+    @include adaptiv-value("padding-bottom", 40, 20, 1);
+    // padding-top: 60px;
+    // padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__logo {
+    // margin-bottom: 20px;
+    // width: 100%;
+    @include adaptiv-value("margin-bottom", 45, 20, 1);
+    padding-left: 30px;
+    color: $buttonHover;
+    @media (max-width: $md4+px) {
+      text-align: center;
+      padding-left: 0;
+    }
+    &._active {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  &__main {
+    &::before {
+      content: "";
+      border-top: 1px solid $mainColor;
+      width: 90%;
+      @include adaptiv-value("padding-bottom", 40, 20, 1);
+      margin: 0 auto;
+      @media (max-width: $md4+px) {
+        width: 70%;
+      }
+    }
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @media (max-width: $md3+px) {
+      // justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    @media (max-width: $md3+px) {
+      @include adaptiv-value("margin-bottom", 40, 20, 1);
+    }
+  }
+
+  &__mail {
+    display: flex;
+    color: $mainColor;
+    @include adaptiv-value("font-size", 22, 18, 1);
+
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $mainHover;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    &::before {
+      margin-right: 15px;
+      font-size: 16px;
+      align-self: center;
+    }
+  }
+
+  &__adress {
+    display: flex;
+    color: $mainColor;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    &::before {
+      margin-right: 15px;
+      font-size: 16px;
+      align-self: center;
+    }
+    @media (max-width: $md4+px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__contacts {
+
+  }
+}
+
+.contacts-footer {
+  @media (max-width: $md3+px) {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: $md4+px) {
+    flex-direction: column;
+  }
+  &__item {
+    @extend .footer__mail;
+    @media (max-width: $md3+px) {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: $md4+px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    // display: flex;
+    // color: $mainColor;
+    // transition: all 0.3s ease 0s;
+    // @media (any-hover: hover) {
+    //   &:hover {
+    //     color: $mainHover;
+    //   }
+    // }
+    // &:not(:last-child) {
+    //   margin-bottom: 20px;
+    // }
+    // &::before {
+    //   margin-right: 15px;
+    //   font-size: 16px;
+    //   align-self: center;
+    // }
+  }
+  // &__item-adress  {
+  //   display: flex;
+  //   color: $mainColor;
+  //   font-size: 18px;
+  //   font-weight: 500;
+  //   margin-bottom: 20px;
+  //   &::before {
+  //     margin-right: 15px;
+  //     font-size: 16px;
+  //     align-self: center;
+  //   }
+  // }
+}
+
+

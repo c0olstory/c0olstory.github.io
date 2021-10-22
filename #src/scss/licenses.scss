@@ -1,0 +1,76 @@
+.page {
+
+  &__gallery-licenses {
+  }
+}
+.gallery-licenses {
+  &__container {
+  }
+
+  &__h2 {
+    @media (max-width: $md3+px) {
+      text-align: center;
+    }
+  }
+
+  &__h3 {
+    @media (max-width: $md3+px) {
+      text-align: center;
+    }
+    @include adaptiv-value("margin-top", 40, 30, 1);
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px -15px;
+  }
+
+  &__block {
+    padding: 0 15px;
+    &:not(:last-child) {
+      @include adaptiv-value("margin-bottom", 40, 20, 1);
+    }
+    // display: flex;
+    // flex: 0 1 33.333%;
+    // flex-direction: column;
+  }
+
+  &__item {
+    display: block;
+    border: 1px solid $mainColor;
+    // height: 100%;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.02);
+        border-color: $buttonHover;
+      }
+    }
+    @media (max-width: $md4+px) {
+      padding: 0;
+      border: none;
+    }
+    // flex: 0 1 33.333%;
+    // margin: 0px 10px 20px 0px;
+    // & img {
+    //   max-width:  100%;
+    // }
+  }
+
+  &__description {
+    @include adaptiv-value("font-size", 18, 16, 1);
+    @include adaptiv-value("margin-top", 20, 15, 1);
+    max-width: 305px;
+    line-height: 130%;
+    padding: 0 15px;
+  }
+
+  &__text {
+    @include adaptiv-value("font-size", 18, 16, 1);
+    @include adaptiv-value("margin-bottom", 30, 15, 1);
+    line-height: 140%;
+  }
+}

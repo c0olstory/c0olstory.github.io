@@ -1,0 +1,61 @@
+<header class="header">
+	<div class="header__wrapper">
+		<div class="header__container _container header-top">
+			<div data-da=".menu__body,768,2" class="header-top__body">
+				<div class="header-top__item header-top__mail">
+					<a href="mailto:grinshatura@yandex.ru" class="header-top__link _icon-mail">grinshatura@yandex.ru</a>
+				</div>
+				<div class="header-top__item header-top__tel-num1">
+					<a href="tel:+79104172377" class="header-top__link _icon-phone phone-mobile">9104172377</a>
+				</div>
+				<div class="header-top__item header-top__tel-num2">
+					<a href="tel:+74964531663" class="header-top__link _icon-phone phone-home">4964531663</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main-menu">
+		<div class="main-menu__wrapper">
+			<div class="main-menu__container _container">
+				<div class="main-menu__main">
+					<a href="/" class="main-menu__logo logo @@if(link==1){_active}">
+						<img src="./img/logo/logo-1.png" alt="Грин лайт">
+					</a>
+					<div class="main-menu__menu menu">
+						<nav class="menu__body">
+							<ul data-spollers="768, max" class="menu__list">
+								<li class="menu__item">
+									<a href="/education.html" class="menu__link @@if(link==2){_active}">Обучение</a>
+								</li>
+								<li class="menu__item">
+									<a href="./price.html" class="menu__link @@if(link==3){_active}">Цены</a>
+								</li>
+								<li class="menu__item">
+									<a href="./about.html" class="menu__link @@if(link==4){_active}">О нас</a>
+									<button data-spoller type="button" class="menu__arrow _icon-arrow"></button>
+									<ul class="menu__sub-list">
+										<li class="menu__sub-item @@if(link==6){_active}">
+											<a href="./licenses.html" class="menu__sub-link @@if(link==6){_active}">Лицензии и документы</a>
+										</li>
+										<li class="menu__sub-item @@if(link==7){_active}">
+											<a href="./questions.html" class="menu__sub-link @@if(link==7){_active}">Вопрос-ответ</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="./contacts.html" class="menu__link @@if(link==5){_active}">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<div class="menu__bottom"></div>
+					</div>
+					<button type="button" class="icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

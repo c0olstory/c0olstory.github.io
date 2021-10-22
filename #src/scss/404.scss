@@ -1,0 +1,17 @@
+.not-found {
+
+  &__title {
+    @include adaptiv-value("font-size", 40, 20, 1);
+    display: inline-block;
+    @include adaptiv-value("margin-bottom", 50, 20, 1);
+    line-height: 130%;
+  }
+
+  &__text {
+    @include adaptiv-value("font-size", 22, 18, 1);
+    line-height: 130%;
+  }
+
+  &__link {
+  }
+}

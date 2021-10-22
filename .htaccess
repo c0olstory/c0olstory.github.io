@@ -1,0 +1,32 @@
+RewriteEngine on
+RewriteBase /
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ http://grinshatura.ru/$1 [R=301,L]
+RewriteCond %{REQUEST_URI} !(\.[^./]+)$
+RewriteCond %{REQUEST_fileNAME} !-d
+RewriteCond %{REQUEST_fileNAME} !-f
+RewriteRule (.*) /$1.html [L]
+
+RewriteRule programm.jsp$ /licenses [R=301,L]
+RewriteRule licence.jsp$ /licenses [R=301,L]
+RewriteRule documents.jsp$ /licenses [R=301,L]
+RewriteRule INN.jsp$ /licenses [R=301,L]
+RewriteRule OGRN.jsp$ /licenses [R=301,L]
+RewriteRule act1.jsp$ /licenses [R=301,L]
+RewriteRule act2.jsp$ /licenses [R=301,L]
+RewriteRule arenda.jsp$ /licenses [R=301,L]
+RewriteRule ustav.jsp$ /licenses [R=301,L]
+
+RewriteRule lectors.jsp$ /about [R=301,L]
+RewriteRule masters.jsp$ /about [R=301,L]
+RewriteRule about.jsp$ /about [R=301,L]
+
+RewriteRule base.jsp$ /education [R=301,L]
+RewriteRule certification.jsp$ /education [R=301,L]
+RewriteRule classes.jsp$ /education [R=301,L]
+RewriteRule exam.jsp$ /education [R=301,L]
+RewriteRule medical.jsp$ /education [R=301,L]
+
+RewriteRule contacts.jsp$ /contacts [R=301,L]
+
+ErrorDocument 404 http://grinshatura.ru/404.html
